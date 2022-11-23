@@ -18,7 +18,7 @@ public class OUserFeed implements Observer {
         this.feeds = new ArrayList<>();
         //TODO: update OUserFeed in constructor after implementing observer pattern
         sourceFeed = App.sourceFeed;
-        //sourceFeed.attach(user.getUserFeed());
+        sourceFeed.attach(this);
     }
 
     public User getUser() {
@@ -31,9 +31,12 @@ public class OUserFeed implements Observer {
 
     @Override
     public void update() {
-        if (user != null) {
-            feeds = sourceFeed.getPosts();
+        for (Post post : sourceFeed.getPosts()) {
+            for (String username : user.getFollowing()) {
+                if (username.equals(post.getUsername())) {
+                    feeds.add(post);
+                }
+            }
         }
     }
 }
-

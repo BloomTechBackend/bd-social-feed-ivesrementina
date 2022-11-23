@@ -29,7 +29,6 @@ public class SourceFeed implements Source {
                 LocalDateTime.now().toString(),
                 body);
         posts = postRepository.addPost(post);
-        attach(user.getUserFeed());
         updateAll();
         return post;
     }
