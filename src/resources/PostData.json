@@ -1,19 +1,7 @@
 [
   {
-    "username": "Testuser",
-    "postedon": {
-      "date": {
-        "year": 2022,
-        "month": 11,
-        "day": 29
-      },
-      "time": {
-        "hour": 9,
-        "minute": 41,
-        "second": 45,
-        "nano": 655166800
-      }
-    },
-    "body": "test post"
+    "username": "Loner",
+    "postedon": "2022-11-29T10:28:30.928944",
+    "body": "I am not interested in what anyone has to say but myself"
   }
 ]

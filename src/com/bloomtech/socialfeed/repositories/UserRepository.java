@@ -1,5 +1,6 @@
 package com.bloomtech.socialfeed.repositories;
 
+import com.bloomtech.socialfeed.helpers.LocalDateTimeAdapter;
 import com.bloomtech.socialfeed.models.User;
 import com.bloomtech.socialfeed.validators.UserInfoValidator;
 import com.google.gson.Gson;
@@ -8,6 +9,7 @@ import com.google.gson.GsonBuilder;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -18,7 +20,8 @@ public class UserRepository {
     private static final String USER_DATA_PATH = "src/resources/UserData.json";
 
     private static final UserInfoValidator userInfoValidator = new UserInfoValidator();
-    Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    Gson gson = new GsonBuilder().setPrettyPrinting()
+            .create();
     public UserRepository() {
     }
 

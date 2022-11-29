@@ -1,11 +1,13 @@
 package com.bloomtech.socialfeed.repositories;
 
+import com.bloomtech.socialfeed.helpers.LocalDateTimeAdapter;
 import com.bloomtech.socialfeed.models.Post;
 import com.bloomtech.socialfeed.models.User;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.io.*;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -14,7 +16,7 @@ import java.util.stream.Collectors;
 
 public class PostRepository {
     private static final String POST_DATA_PATH = "src/resources/PostData.json";
-    Gson gson = new GsonBuilder().setPrettyPrinting().create();
+    Gson gson = new GsonBuilder().setPrettyPrinting().registerTypeAdapter(LocalDateTime.class, new LocalDateTimeAdapter()).create();
     public PostRepository() {
     }
 
