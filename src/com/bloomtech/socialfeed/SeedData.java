@@ -62,3 +62,4 @@ public class SeedData {
         App.sourceFeed.addPost(loner, "I am not interested in what anyone has to say but myself");
     }
 }
+

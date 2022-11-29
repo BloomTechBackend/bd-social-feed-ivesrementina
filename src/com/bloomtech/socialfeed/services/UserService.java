@@ -1,6 +1,5 @@
 package com.bloomtech.socialfeed.services;
 
-import com.bloomtech.socialfeed.exceptions.UserValidationException;
 import com.bloomtech.socialfeed.models.User;
 import com.bloomtech.socialfeed.repositories.UserRepository;
 import com.bloomtech.socialfeed.validators.EmailValidator;

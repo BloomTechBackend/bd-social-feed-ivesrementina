@@ -1,7 +1,7 @@
 package com.bloomtech.socialfeed;
 
-import com.bloomtech.socialfeed.exceptions.EmailValidationException;
-import com.bloomtech.socialfeed.exceptions.UserValidationException;
+import com.bloomtech.socialfeed.helpers.exceptions.EmailValidationException;
+import com.bloomtech.socialfeed.helpers.exceptions.UserValidationException;
 import com.bloomtech.socialfeed.models.User;
 import com.bloomtech.socialfeed.repositories.UserRepository;
 import com.bloomtech.socialfeed.services.UserService;
